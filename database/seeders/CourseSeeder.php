@@ -26,8 +26,8 @@ class CourseSeeder extends Seeder
 
         $course2 = new Course();
 
-        $course2->name = "Laravel";
-        $course2->description = "Best PHP Framework";
+        $course2->name = "Vue.js";
+        $course2->description = "A JavaScript Framework";
         $course2->category = "Web Development";
 
         $course2->save();
@@ -35,8 +35,8 @@ class CourseSeeder extends Seeder
 
         $course3 = new Course();
 
-        $course3->name = "Laravel";
-        $course3->description = "Best PHP Framework";
+        $course3->name = "React.js";
+        $course3->description = "A JavaScript Library";
         $course3->category = "Web Development";
 
         $course3->save();
