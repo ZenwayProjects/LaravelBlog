@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CourseController;
+use App\Models\Course;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,15 +23,12 @@ Route::get('courses', [CourseController::class, 'index'])->name('courses.index')
 
 Route::get('courses/create', [CourseController::class, 'create'])->name('courses.create');
 
-Route::get('/courses/{id}', [CourseController::class, 'show'])->name('courses.show');
+Route::post('courses', [CourseController::class, 'store'])->name('courses.store');
 
-// Route::get('cursos/{curso}/{categoria?}', function ($curso, $categoria = null) {
+Route::get('/courses/{course}', [CourseController::class, 'show'])->name('courses.show');
 
-//     if($categoria){
-//         return "Bienvenid@ al curso de $curso, de la categoria $categoria";
-//     }else{
-//         return "Bienvenid@ al curso de : $curso";
-//     }
+Route::get('courses/{course}/edit', [CourseController::class, 'edit'])->name('courses.edit');
 
-    
-// });
+Route::put('courses/{course}', [CourseController::class, 'update'])->name('courses.update');
+
+
