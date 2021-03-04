@@ -23,7 +23,7 @@
             Description:
             <br>
             <textarea rows="5" name="description" >
-                {{old('description', $course->description)}}"
+                {{old('description', $course->description)}}
             </textarea>
         </label>
         @error('description')
