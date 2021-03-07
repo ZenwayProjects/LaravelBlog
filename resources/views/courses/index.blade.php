@@ -3,7 +3,7 @@
     
 @section('content')
     <h1>Bienvenido a la página de cursos</h1>
-    <a href="{{route('courses.create')}}">Crear Curso</a>
+    <a href="{{route('courses.create')}}">Create Course</a>
     <ul>
         @foreach ($courses as $course)
             <li>
