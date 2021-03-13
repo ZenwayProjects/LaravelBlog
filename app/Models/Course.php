@@ -13,4 +13,9 @@ class Course extends Model
     /* protected $fillable =['name', 'description', 'category']; */
     //guarded es para proteger un campo, un campo protegido no puede ser enviado desde el formularion 'status' en nuestro ejemplo
     protected $guarded = [];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
