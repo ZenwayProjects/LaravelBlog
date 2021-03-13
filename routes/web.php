@@ -16,9 +16,11 @@ use App\Models\Course;
 |
 */
 
-Route::get('/',HomeController::class);
+Route::get('/',HomeController::class)->name('home');
 
 
 Route::resource('courses', CourseController::class);
+
+Route::view('aboutus', 'aboutus')->name('aboutus');
 
 
