@@ -43,6 +43,7 @@ class CourseController extends Controller
     public function update(Request $request, Course $course){
         $request->validate([
             'name'=>'required',
+            'slug'=>'required',
             'description'=>'required',
             'category'=>'required'
         ]);

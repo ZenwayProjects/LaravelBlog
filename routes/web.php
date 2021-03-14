@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactusController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CourseController;
@@ -23,4 +24,7 @@ Route::resource('courses', CourseController::class);
 
 Route::view('aboutus', 'aboutus')->name('aboutus');
 
+Route::get('contactus', [ContactusController::class, 'index'])->name('contactus.index');
+
+Route::post('contactus', [ContactusController::class, 'store'])->name('contactus.store');
 
